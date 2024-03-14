@@ -39,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindValue(4, $password_hash, SQLITE3_TEXT);
     $result = $stmt->execute();
     if ($result) {
+        $_SESSION['user_id'] = $user_id;
         header("Location: index.php");
         exit();
     } else {
