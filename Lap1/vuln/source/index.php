@@ -1,17 +1,15 @@
 <?php
-$db = new SQLite3('database.db');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
+$db = new SQLite3('database.db');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     // Prepare a statement to retrieve the user's details by username
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username=:username");
+    $stmt = $db->prepare("SELECT * FROM users WHERE username=:username");
     $stmt->bindValue(':username', $username, SQLITE3_TEXT);
     $result = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
 
@@ -42,8 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h2>Login</h2>
     <form action="index.php" method="post">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="username">Username:</label>
+        <input type="username" id="username" name="username" required><br><br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
         <button type="submit">Login</button>
