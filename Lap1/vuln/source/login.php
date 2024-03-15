@@ -2,8 +2,8 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 
-$db = new SQLite3('database.db');
 session_start();
+$db = new SQLite3('database.db');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     function sanitize_input($data) {
@@ -73,5 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit">Signup</button>
         </div>
     </form>
+    <p>Already have an account? <a href="index.php">Login</a></p>
 </body>
 </html>
