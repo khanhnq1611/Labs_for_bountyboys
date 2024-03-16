@@ -48,31 +48,87 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-</head>
-<body>
-    <h2>Signup</h2>
-    <form action="login.php" method="post">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div>
-            <button type="submit">Signup</button>
-        </div>
-    </form>
-    <p>Already have an account? <a href="index.php">Login</a></p>
-</body>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('shop-background.jpeg');
+        background-size: 110% 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 2rem;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin-bottom: 0.5rem;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        padding: 0.5rem;
+        border-radius: 4px;
+border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      p {
+        text-align: center;
+        margin-top: 1rem;
+      }
+      p a {color: #4CAF50;
+        text-decoration: none;
+      }
+      p a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Signup</h1>
+      <form action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <input type="submit" />
+      </form>
+      <p>Already have an account? <a href="index.php">Login now</a></p>
+    </div>
+  </body>
 </html>
+
