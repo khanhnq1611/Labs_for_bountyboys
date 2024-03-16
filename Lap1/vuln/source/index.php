@@ -105,7 +105,7 @@ border: 1px solid #ccc;
 
         <input type="submit" value="Login" />
       </form>
-      <?php if ($error !== ""): ?>
+      <?php if ($error): ?>
         <p style="color: red; text-align: center;"><?php echo htmlspecialchars($error); ?></p>
       <?php endif; ?>
       <p>Don't have an account? <a href="login.php">Sign up now</a></p>
