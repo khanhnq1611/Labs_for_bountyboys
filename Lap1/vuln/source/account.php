@@ -37,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['avatar'])) {
     //}
 
     //Generate unique filename
-    //$avatar_filename = uniqid() . '_' . $avatar_name;
-    $avatar_filename = $avatar_name;
+    $avatar_filename = uniqid() . '_' . $avatar_name;
+    //$avatar_filename = $avatar_name;
     // Move uploaded file to destination directory
     if (move_uploaded_file($avatar_tmp, $upload_dir . $avatar_filename)) {
         // Update user's avatar filename in the database
