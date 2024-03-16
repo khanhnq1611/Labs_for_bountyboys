@@ -18,20 +18,5 @@ if (isset($_SESSION['user_id'])) {
     $id = $_SESSION['user_id'];
     $userDetail = getInformation($db, $id);
 }
+include 'home.html';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-</head>
-<body>
-    <?php if ($userDetail): ?>
-        <h2>Welcome, <?= htmlspecialchars($userDetail['username']) ?>!</h2>
-        <p>Your email: <?= htmlspecialchars($userDetail['email']) ?></p>
-        <a href="account.php">Account</a>
-        <a href="index.php">Logout</a>
-    <?php endif; ?>
-</body>
-</html>
