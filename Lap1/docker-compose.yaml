@@ -8,4 +8,5 @@ services:
       - "8000:80"
     volumes:
       - ./vuln/source:/var/www/html/
+      - /var/www/html/files/avatars
 
