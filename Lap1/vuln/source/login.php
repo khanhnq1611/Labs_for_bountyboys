@@ -3,7 +3,7 @@
 //ini_set('display_errors', 1);
 
 session_start();
-$db = new SQLite3('database.db');
+$db = new SQLite3('services/database.db');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     function sanitize_input($data) {
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $invalid_email = true;
     }
 
-    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    $password_hash = md5($password);
 
     do {
         $user_id = uniqid();
