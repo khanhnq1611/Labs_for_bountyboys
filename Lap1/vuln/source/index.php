@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
-$db = new SQLite3('database.db');
+$db = new SQLite3('services/database.db');
 $error = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result) {
         // Verify the password
-        if (password_verify($password, $result['password'])) {
+        if (md5($password) === $result['password']) {
             $_SESSION['user_id'] = $result['id'];
             $_SESSION['username'] = $result['username'];
             header("Location: home.php?id=" . $result['id']); ;
@@ -36,9 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-image: url('shop-background.jpeg');
-        background-size: 110% 100%;
-        background-position: center center;
+        background-image: url('https://t4.ftcdn.net/jpg/05/96/62/65/360_F_596626503_jrzjZNYStDexiWxQFqO7oCh6M8PdMlJs.jpg');
+        background-size: 100% 100%;
+        background-position: center;
         background-repeat: no-repeat;
         display: flex;
         justify-content: center;
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         margin: 0;
       }
       .container {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(250, 250, 250, 0.7);
         padding: 2rem;
         border-radius: 4px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -112,4 +112,3 @@ border: 1px solid #ccc;
     </div>
   </body>
 </html>
-
