@@ -6,6 +6,7 @@ COPY ./source .
 
 RUN chown -R root:www-data /var/www/html
 RUN chmod 777 /var/www/html
+RUN chmod 777 /var/www/html/services
 
 RUN chown -R root:www-data /var/www/html/files/avatars
 RUN chmod 777 /var/www/html/files/avatars
