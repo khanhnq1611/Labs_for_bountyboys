@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
-$db = new SQLite3('database.db');
+$db = new SQLite3('services/database.db');
 if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit();
