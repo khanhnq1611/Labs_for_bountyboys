@@ -23,8 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindValue(1, md5($resetPasswordID), SQLITE3_TEXT);
         $result = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
         $error = true;
-    } else {
-        $error = false;
     }
 }
 ?>
@@ -135,6 +133,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><?php echo "<script>
                 alert('Your password reset ID is: $resetPasswordID');
               </script>"; ?></p>
+      <?php else: ?>
+        <p style="color: red; text-align: center;">Type a correct answer</p>
             <?php endif; ?>
       <a href="index.php">Back to login</a>
     </div>
