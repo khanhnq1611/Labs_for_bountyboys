@@ -9,7 +9,7 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: rgb(54, 93, 100);
+            background-color: #e0e9f3;
         }
         .container {
             display: flex;
