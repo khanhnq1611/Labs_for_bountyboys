@@ -99,6 +99,7 @@
 </head>
 <body>
     <div class="container">
+	    <a href="index.php">Home</a>
         <div class="image">
             <?php
                 error_reporting(E_ALL);
