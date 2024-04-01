@@ -2,9 +2,9 @@ version: '3'
 
 services:
   web:
-    build: ./vul
+    build: ./Vul
     restart: unless-stopped
     ports:
-      - "8004:80"
+      - "8005:80"
     volumes:
-      - ./vuln/source:/var/www/html/
+      - ./Vul/Src:/var/www/html/
