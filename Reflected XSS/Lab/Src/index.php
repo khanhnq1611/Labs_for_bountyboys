@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Small City Boy Store</title>
+  <title>Stupid Student Store</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <style>
     body {
@@ -51,7 +51,7 @@
       transition: transform 0.3s ease;
     }
     .item:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
     }
     .item img {
       width: 100%;
@@ -119,7 +119,7 @@
     <header>
       <h1>Stupid Student Store</h1>
       <div class="header-right">
-      <form class="search-bar" action="resetpass2.php" method="get">
+      <form class="search-bar" action="index.php" method="get">
         <input type="text" name="search" placeholder="Search for items...">
         <input type="submit" value="Search">
       </form>
@@ -128,87 +128,61 @@
     </div class="search-result">
        <?php 
         if (isset($_GET['search'])) {
-    	echo '<h3 style="text-align:center;">Search results for "' . $_GET['search'] . '":</h3>';
-    	}
-  	?>
+    	      echo '<h3 style="text-align:center;">Search results for "' . $_GET['search'] . '":</h3>';
+    	  }
+  	  ?>
      </div>
-    <div class="account">
-      <a href="account.php"><img src="https://source.unsplash.com/random/50x50?people" alt="Avatar" class="avatar" /></a>
-      <a href="account.php">Account</a>
-    </div>
-    <div class="items">
+    
+     <div class="items">
       <div class="item">
-        <img src="https://img.ssensemedia.com/images/g_center,f_auto/232099M186053_1/levis-blue-501-54-jeans.jpg" alt="Item 1" />
+        <img src="https://purepng.com/public/uploads/large/purepng.com-mens-jeansgarmentlower-bodydenimjeansblue-1421526362760kjplj.png" alt="Item 1" />
         <div class="item-content">
-          <h2>Jean</h2>
+          <h2>Jeans</h2>
           <p>$70</p>
-          <a href="https://img.ssensemedia.com/images/g_center,f_auto/232099M186053_1/levis-blue-501-54-jeans.jpg">Details</a>
+          <a href="post.php?id=1">Details</a>
         </div>
       </div>
       <div class="item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUbji-87EJH1ulbcL2yRk2iuhbTS8V4RhdrnL2l8YS7NMCg0tc" alt="Item 2" />
+        <img src="http://www.freepngimg.com/download/jacket/2-leather-jacket-png-image.png" alt="Item 2" />
         <div class="item-content">
           <h2>Jacket</h2>
           <p>$30</p>
-          <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUbji-87EJH1ulbcL2yRk2iuhbTS8V4RhdrnL2l8YS7NMCg0tc">Details</a>
+          <a href="post.php?id=2">Details</a>
         </div>
       </div>
       <div class="item">
-        <img src="https://m.media-amazon.com/images/I/71kgvWAvAGL._AC_SX466_.jpg" alt="Item 3" />
+        <img src="http://pluspng.com/img-png/pants-png-hd-cargo-pant-png-image-trousers-png-hd-966.png" alt="Item 3" />
         <div class="item-content">
-          <h2>Pant</h2>
+          <h2>Pants</h2>
           <p>$40</p>
-          <a href="https://m.media-amazon.com/images/I/71kgvWAvAGL._AC_SX466_.jpg">Details</a>
+          <a href="post.php?id=3">Details</a>
         </div>
       </div>
       <div class="item">
-        <img src="https://m.media-amazon.com/images/I/41Bjv5ejlwL._AC_SX569_.jpg" alt="Item 4" />
+        <img src="https://pngimg.com/uploads/tshirt/tshirt_PNG5448.png" alt="Item 4" />
         <div class="item-content">
           <h2>T-shirt</h2>
           <p>$50</p>
-          <a href="https://m.media-amazon.com/images/I/41Bjv5ejlwL._AC_SX569_.jpg">Details</a>
+          <a href="post.php?id=4">Details</a>
         </div>
       </div>
       <div class="item">
-        <img src="https://bizweb.dktcdn.net/100/287/440/products/blacksweater.png?v=1585033387160" alt="Item 5" />
+        <img src="https://pngimg.com/uploads/sweater/sweater_PNG3.png" alt="Item 5" />
         <div class="item-content">
           <h2>Sweater</h2>
           <p>$60</p>
-          <a href="https://bizweb.dktcdn.net/100/287/440/products/blacksweater.png?v=1585033387160">Details</a>
+          <a href="post.php?id=5">Details</a>
         </div>
       </div>
       <div class="item">
-        <img src="https://cdn.skatedeluxe.com/thumb/v2qH2y2qh-F5ia5_qF-atVlTChg=/fit-in/600x700/filters:fill(white):brightness(-4)/product/164760-1-Patagonia-Baggies5.jpg" alt="Item 6" />
+        <img src="http://www.pngall.com/wp-content/uploads/2016/09/Shorts-PNG.png" alt="Item 6" />
         <div class="item-content">
-          <h2>Short</h2>
+          <h2>Shorts</h2>
           <p>$70</p>
-          <a href="https://cdn.skatedeluxe.com/thumb/v2qH2y2qh-F5ia5_qF-atVlTChg=/fit-in/600x700/filters:fill(white):brightness(-4)/product/164760-1-Patagonia-Baggies5.jpg">Details</a>
+          <a href="post.php?id=6">Details</a>
         </div>
       </div>
-      <div class="item">
-        <img src="https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1431568_alternate10?$rl_df_pdp_5_7_a10$" alt="Item 7" />
-        <div class="item-content">
-          <h2>Polo</h2>
-          <p>$80</p>
-          <a href="https://www.optimized-rlmedia.io/is/image/PoloGSI/s7-1431568_alternate10?$rl_df_pdp_5_7_a10$">Details</a>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/450757/item/goods_32_450757.jpg?width=1083&impolicy=quality_60&imformat=chrome" alt="Item 8" />
-        <div class="item-content">
-          <h2>Sock</h2>
-          <p>$90</p>
-          <a href="https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/450757/item/goods_32_450757.jpg?width=1083&impolicy=quality_60&imformat=chrome">Details</a>
-        </div>
-      </div>
-      <div class="item">
-        <img src="https://cdna.lystit.com/200/250/tr/photos/toddsnyder/270612c4/timex-Ivory-Timex-X-Todd-Snyder-Mk-1-Amalfi-Dress-Watch.jpeg" alt="Item 9" />
-        <div class="item-content">
-          <h2>Watch</h2>
-          <p>$100000</p>
-          <a href="https://cdna.lystit.com/200/250/tr/photos/toddsnyder/270612c4/timex-Ivory-Timex-X-Todd-Snyder-Mk-1-Amalfi-Dress-Watch.jpeg">Details</a>
-        </div>
-      </div>
+      
     </div>
   </div>
 </body>
