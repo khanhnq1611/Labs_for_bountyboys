@@ -108,7 +108,7 @@ border: 1px solid #ccc;
       <?php if ($error): ?>
         <p style="color: red; text-align: center;"><?php echo htmlspecialchars($error); ?></p>
       <?php endif; ?>
-      
+      <!-- The default credentials for employees are employees/employees -->
     </div>
   </body>
 </html>
