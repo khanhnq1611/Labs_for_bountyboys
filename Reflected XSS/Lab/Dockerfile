@@ -2,7 +2,7 @@ FROM php:8.0-apache
 
 WORKDIR /var/www/html/
 
-COPY ./src .
+COPY ./Src .
 
 RUN chown -R root:www-data /var/www/html
 RUN chmod 777 /var/www/html
