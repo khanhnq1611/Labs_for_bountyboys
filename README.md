@@ -1,2 +1,1 @@
-Cryptographic Failures
-Upload Vulrability
+Lab1: Cryptographic Failures & Upload Vulrability
