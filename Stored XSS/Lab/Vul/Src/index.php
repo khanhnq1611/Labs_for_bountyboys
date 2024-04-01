@@ -94,10 +94,7 @@
       <h1>Stupid Student Store</h1>
       
     </header>
-    <div class="account">
-      <a href="account.php"><img src="https://source.unsplash.com/random/50x50?people" alt="Avatar" class="avatar" /></a>
-      <a href="account.php">Account</a>
-    </div>
+    
     <div class="items">
       <div class="item">
         <img src="https://purepng.com/public/uploads/large/purepng.com-mens-jeansgarmentlower-bodydenimjeansblue-1421526362760kjplj.png" alt="Item 1" />
