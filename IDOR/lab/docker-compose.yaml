@@ -7,4 +7,4 @@ services:
     ports:
       - "8888:80"
     volumes:
-      - ./vuln/source:/var/www/html/
+      - ./vul/src:/var/www/html/
