@@ -99,6 +99,7 @@
 </head>
 <body>
     <div class="container">
+    <a href="index.php">Home</a>
         <div class="image">
             <?php
                 error_reporting(E_ALL);
@@ -141,7 +142,6 @@
             <div class="comment-container">
                 <h3>Customer Comments</h3>
 
-                
     
                 <div class="comment-list">
                     <?php
