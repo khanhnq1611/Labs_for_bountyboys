@@ -9,7 +9,7 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: rgb(54, 93, 100);
+            background-color: #e0e9f3;
         }
         .container {
             display: flex;
@@ -99,11 +99,11 @@
 </head>
 <body>
     <div class="container">
+    <a href="index.php">Home</a>
         <div class="image">
             <?php
                 error_reporting(E_ALL);
                 ini_set('display_errors', 1);
-                session_start();
 		$db = new SQLite3('posts.db');
 		$postId = $_GET['id'];
 		$query = "SELECT src FROM posts WHERE id = {$postId} ";
@@ -142,17 +142,6 @@
             <div class="comment-container">
                 <h3>Customer Comments</h3>
 
-                <form action="submit-comment.php" method="post" class="comment-form">
-                    <input type="hidden" name="post_id" value="<?php echo htmlspecialchars($postId); ?>">
-
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" required>
-
-                    <label for="comment">Comment:</label>
-                    <textarea name="comment" id="comment" rows="5" cols="30" required></textarea>
-
-                    <input type="submit" value="Post">
-                </form>
     
                 <div class="comment-list">
                     <?php
