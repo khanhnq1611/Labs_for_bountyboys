@@ -104,7 +104,6 @@
             <?php
                 error_reporting(E_ALL);
                 ini_set('display_errors', 1);
-                session_start();
 		$db = new SQLite3('posts.db');
 		$postId = $_GET['id'];
 		$query = "SELECT src FROM posts WHERE id = {$postId} ";
