@@ -12,8 +12,7 @@ $name = $_POST['name'];
 
 $query = "INSERT INTO posts (name, comments)
          VALUES ( '$name', '$comment')";
-
-$db->exec($query);
+$result = $db->query($query);
 
 // Redirect back to the details page
 header('Location: post.php?id=' . $postId);
