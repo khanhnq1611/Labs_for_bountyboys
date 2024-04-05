@@ -127,7 +127,7 @@ $stmt = $db->prepare("SELECT * FROM user WHERE id = ?");
             <?php endif; ?>
         </div>
         <div class="logout">
-            <a href="index2.php">Home</a>
+            <a href="index.php">Home</a>
             <a href="signup.php">Logout</a>
         </div>
     </div>
